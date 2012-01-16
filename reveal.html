@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<style>
+/* CSS styles for this page*/
+.reveal * {display:none;}
+.reveal *.handle{display:block;}
+.revealed * {display:inline;}
+</style>
+<script>
+window.onload=function(){
+var elements=document.getEleementsByClassName("reveal");
+for(var i=0;i<elements.length;i++)
+{
+var elt=elements[i];
+var title=elt.getElementsByClassName("handle")[0];
+title.onclick=function(){
+if(elt.className=="reveal") elt.className="revealed";
+else if(elt.className=="revealed") elt.className="reveal";
+
+}
+}
+
+};
+</script>
+</head>
+<body>
+<div class="reveal">
+<h1 class="handle">Click here to reveal hodden text</h1>
+<p>This paragrapgh is hidden.it appears when title clicked</p>
+
+</div>
+
+</body>
+</html>
